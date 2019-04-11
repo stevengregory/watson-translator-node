@@ -19,7 +19,7 @@ async function doTranslation(text) {
     version: process.env.LANGUAGE_TRANSLATOR_VERSION
   });
   const body = await languageTranslator.translate(params(text));
-  console.log(chalk.green(body.translations[0].translation));
+  console.log(chalk.cyan(body.translations[0].translation));
 }
 
 export default doTranslation;

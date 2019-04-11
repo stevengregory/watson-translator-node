@@ -1,11 +1,11 @@
-import prompt from 'prompt';
+import prompts from 'prompts';
 import doTranslation from './translate';
 
-function init() {
-  prompt.start();
-  prompt.get(['message'], function(err, result) {
-    doTranslation(result.message);
+(async () => {
+  let response = await prompts({
+    type: 'text',
+    name: 'meaning',
+    message: 'Enter what you want IBM Watson to translate.'
   });
-}
-
-init();
+  doTranslation(response.meaning);
+})();
