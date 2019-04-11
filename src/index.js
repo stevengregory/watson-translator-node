@@ -5,7 +5,8 @@ import doTranslation from './translate';
   let response = await prompts({
     type: 'text',
     name: 'meaning',
-    message: 'Enter what you want IBM Watson to translate.'
+    message: 'Enter what you want IBM Watson to translate.',
+    validate: name => (name.length <= 0 ? false : true)
   });
   doTranslation(response.meaning);
 })();
