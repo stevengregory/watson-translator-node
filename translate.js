@@ -15,7 +15,7 @@ async function doTranslation(text) {
   const languageTranslator = new LanguageTranslatorV3({
     username: process.env.LANGUAGE_TRANSLATOR_USERNAME,
     password: process.env.LANGUAGE_TRANSLATOR_PASSWORD,
-    version: '2019-01-10'
+    version: process.env.LANGUAGE_TRANSLATOR_VERSION
   });
   const body = await languageTranslator.translate(params(text));
   console.log(body.translations[0].translation);
