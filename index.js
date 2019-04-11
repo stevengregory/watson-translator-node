@@ -17,14 +17,17 @@ const params = {
 };
 
 async function callTranslate(msg) {
-  const body = await languageTranslator.translate(params);
+  const body = await languageTranslator.translate({
+    text: msg,
+    source: 'en',
+    target: 'es'
+  });
   console.log(body.translations[0].translation);
 }
 
 async function init() {
   prompt.start();
   await prompt.get(['msg'], function(err, result) {
-    // console.log('message: ' + callTranslate());
     callTranslate(result.msg);
   });
 }
