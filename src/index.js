@@ -3,8 +3,8 @@ import doTranslation from './translate';
 
 function init() {
   prompt.start();
-  prompt.get(['Message to translate'], function(err, result) {
-    doTranslation(result.msg);
+  prompt.get(['message'], function(err, result) {
+    doTranslation(result.message);
   });
 }
 

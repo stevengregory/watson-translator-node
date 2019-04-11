@@ -1,4 +1,5 @@
 import dotenv from 'dotenv';
+import chalk from 'chalk';
 import LanguageTranslatorV3 from 'watson-developer-cloud/language-translator/v3';
 
 dotenv.config();
@@ -18,7 +19,7 @@ async function doTranslation(text) {
     version: process.env.LANGUAGE_TRANSLATOR_VERSION
   });
   const body = await languageTranslator.translate(params(text));
-  console.log(body.translations[0].translation);
+  console.log(chalk.green(body.translations[0].translation));
 }
 
 export default doTranslation;
