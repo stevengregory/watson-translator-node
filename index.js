@@ -10,18 +10,16 @@ const languageTranslator = new LanguageTranslatorV3({
   version: '2019-01-10'
 });
 
-const params = {
-  text: 'Hello, this is a example of translating language with Watson.',
-  source: 'en',
-  target: 'es'
-};
+function params(text = 'hola', source = 'en', target = 'es') {
+  return {
+    text,
+    source,
+    target
+  };
+}
 
-async function callTranslate(msg) {
-  const body = await languageTranslator.translate({
-    text: msg,
-    source: 'en',
-    target: 'es'
-  });
+async function callTranslate(text) {
+  const body = await languageTranslator.translate(params(text));
   console.log(body.translations[0].translation);
 }
 
