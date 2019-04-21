@@ -8,5 +8,5 @@ import doTranslation from './translate';
     message: 'Enter a message for IBM Watson to translate.',
     validate: name => (name.length <= 0 ? false : true)
   });
-  doTranslation(response.meaning);
+  doTranslation(response.meaning, 'en', 'ja');
 })();
