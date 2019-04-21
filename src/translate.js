@@ -14,7 +14,7 @@ function params(text = 'hola', source = 'en', target = 'es') {
 
 async function doTranslation(text, source, target) {
   const languageTranslator = new LanguageTranslatorV3({
-    iam_apikey: process.env.LANGUAGE_TRANSLATOR_API_KEY,
+    iam_apikey: process.env.API_KEY,
     url: 'https://gateway.watsonplatform.net/language-translator/api/',
     version: '2019-01-10'
   });
