@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "start": "node -r esm src/index.js"
+    "start": "node -r esm src/app.js"
   },
   "keywords": [],
   "author": "",
