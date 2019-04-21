@@ -1,24 +1,22 @@
-import dotenv from 'dotenv';
 import chalk from 'chalk';
 import LanguageTranslatorV3 from 'watson-developer-cloud/language-translator/v3';
+import config from './config.js';
 
-dotenv.config();
-
-function params(text = 'hola', source = 'en', target = 'es') {
+function params(text) {
   return {
     text,
-    source,
-    target
+    source: config.source,
+    target: config.target
   };
 }
 
-async function doTranslation(text, source, target) {
+async function doTranslation(text) {
   const languageTranslator = new LanguageTranslatorV3({
-    iam_apikey: process.env.API_KEY,
-    url: 'https://gateway.watsonplatform.net/language-translator/api/',
-    version: '2019-01-10'
+    iam_apikey: config.apiKey,
+    url: config.url,
+    version: config.version
   });
-  const body = await languageTranslator.translate(params(text, source, target));
+  const body = await languageTranslator.translate(params(text));
   console.log(chalk.cyan(body.translations[0].translation));
 }
 
