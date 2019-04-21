@@ -14,9 +14,9 @@ function params(text = 'hola', source = 'en', target = 'es') {
 
 async function doTranslation(text, source, target) {
   const languageTranslator = new LanguageTranslatorV3({
-    username: process.env.LANGUAGE_TRANSLATOR_USERNAME,
-    password: process.env.LANGUAGE_TRANSLATOR_PASSWORD,
-    version: process.env.LANGUAGE_TRANSLATOR_VERSION
+    iam_apikey: process.env.LANGUAGE_TRANSLATOR_API_KEY,
+    url: 'https://gateway.watsonplatform.net/language-translator/api/',
+    version: '2019-01-10'
   });
   const body = await languageTranslator.translate(params(text, source, target));
   console.log(chalk.cyan(body.translations[0].translation));
