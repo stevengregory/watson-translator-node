@@ -8,7 +8,7 @@ The language model is set for English to Japanese, but can be changed in the `co
 
 ## Requirements
 
-1. Sign up for an [IBM Cloud account](https://dataplatform.cloud.ibm.com/registration/stepone) or simply log in.
+1. Sign up for an [IBM Cloud account](https://dataplatform.cloud.ibm.com/registration/stepone) or simply [log in](https://cloud.ibm.com/login).
 
 1. Create a [Language Translator](https://console.bluemix.net/catalog/services/language-translator) service.
 
@@ -16,22 +16,28 @@ The language model is set for English to Japanese, but can be changed in the `co
 
 ## Getting Started
 
-1. Clone this repository
+1. Clone this repository.
 
    ```bash
    git clone https://github.com/stevengregory/watson-translator-node.git
    cd watson-translator-node
    ```
 
-1. Configure the environment settings
+1. Configure the environment settings.
 
-   Create a `.env` file and place it in the root of the project directory. Add the API key from your IBM Watson service.
+   Create a `.env` file and place it in the root of the project directory.
 
-   ```javascript
-   API_KEY = your_api_key;
+   ```bash
+   touch .env
    ```
 
-1. Install the npm packages
+   Add the API key from your IBM Watson service.
+
+   ```javascript
+   API_KEY=your_api_key
+   ```
+
+1. Install the npm packages.
 
    ```bash
    npm install
