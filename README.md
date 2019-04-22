@@ -1,6 +1,6 @@
 # Watson Translator with Node
 
-An experiment with the [IBM Watson](https://www.ibm.com/watson) Language Translator service using Node. This simple app uses the [Language Translator](https://www.ibm.com/watson/services/language-translator) to perform intelligent language translation. The language model is set for English to Japanese translation, but can be changed in the `app.js` file.
+An experiment with the [IBM Watson](https://www.ibm.com/watson) Language Translator service using Node. This simple app uses the [Language Translator](https://www.ibm.com/watson/services/language-translator) to perform intelligent language translation. The language model is set for English to Japanese, but can be changed in the `config.js` file.
 
 ![Demo](https://i.imgur.com/n3Drccp.png)
 
@@ -21,18 +21,18 @@ An experiment with the [IBM Watson](https://www.ibm.com/watson) Language Transla
    cd watson-translator-node
    ```
 
-1. Install the npm packages
-
-   ```bash
-   npm install
-   ```
-
 1. Configure the environment settings
 
    Create a `.env` file and place it in the root of the project directory. Add the API key from your IBM Watson service.
 
    ```javascript
    API_KEY = your_api_key;
+   ```
+
+1. Install the npm packages
+
+   ```bash
+   npm install
    ```
 
 1. Run the app!
