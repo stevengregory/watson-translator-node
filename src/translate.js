@@ -14,10 +14,10 @@ const getServiceData = () => ({
   version: config.version
 });
 
-async function doTranslation(text) {
+const doTranslation = async text => {
   const languageTranslator = new LanguageTranslatorV3(getServiceData());
   const body = await languageTranslator.translate(getMessageData(text));
   console.log(chalk.cyan(body.translations[0].translation));
-}
+};
 
 export default doTranslation;
