@@ -11,8 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "chalk": "^2.4.2",
-    "esm": "^3.2.22",
-    "prompts": "^2.0.4",
+    "esm": "^3.2.25",
+    "prompts": "^2.1.0",
     "watson-developer-cloud": "^4.0.1"
   }
 }
